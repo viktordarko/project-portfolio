@@ -19,7 +19,7 @@ const HeaderContainer = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-image: url("/assets/styleimages/Header_bg.jpg");
+  background-image: url("/assets/styleImages/Header_bg.jpg");
   height: 5em;
 `;
 

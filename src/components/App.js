@@ -27,7 +27,7 @@ export default App;
 const MainContainer = styled.div`
   width: 100vw;
   height: calc(100vh - 5em);
-  background-image: url("/assets/styleimages/WebsiteBG.jpg");
+  background-image: url("/assets/styleImages/WebsiteBG.jpg");
   background-position: center;
   background-size: cover;
   margin-top: 0;
