@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import styled, { keyframes } from "styled-components";
 import { languages, countriesLived } from "../data";
-import ListItem from "./ListItems";
+import ListItem from "./ListItem";
 
 const Homepage = () => {
   const [isBlinking, setisBlinking] = useState(true);
@@ -22,6 +22,7 @@ const Homepage = () => {
         <MainParagraph>I am currently a full-stack web developer student, you can click on the links above to find out more about me.</MainParagraph>
         <MainParagraph>I have many hobbies, love listening to music and traveling, and also enjoy coding, reading and watching series.</MainParagraph>
         <MainParagraph>I speak the following languages:</MainParagraph>
+        
         {languagesArray.map((language) => {
           return <ListItem item={language} key={language.id}/>;
         })}

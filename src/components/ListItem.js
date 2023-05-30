@@ -4,7 +4,7 @@ import styled from "styled-components"
 const ListItem = ({item}) => {
     
 return (
-    <ListDiv className="language">
+    <ListDiv className={item.contact ? "contactPage" : ""}>
 <StyledParagraph className={item.isProgramming ? "programming" : ""}>{item.name}</StyledParagraph>
 <img src={item.iconSrc} alt={item.name} />
 </ListDiv>
@@ -16,9 +16,14 @@ const ListDiv = styled.div`
 display: flex;
 align-items: center;
 justify-content: space-between;
-width: 25%;
+width: 30%;
 padding: .3em;
 flex-wrap: wrap;
+
+&.contactPage {
+flex-direction: column;
+}
+
 `
 const StyledParagraph = styled.p`
 font-style: italic;
@@ -27,3 +32,5 @@ font-style: italic;
     color: green;
   }
 `
+
+export {ListDiv, StyledParagraph}
