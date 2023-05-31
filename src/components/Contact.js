@@ -34,4 +34,5 @@ margin-top: 5em;
 font-size: x-large;
 width: 100%;
 justify-content: space-around;
+height: 64vh;
 `

@@ -104,3 +104,51 @@ export const contact = {
         contact: true,
     },
         }
+
+export const experience = {
+    apple2: {
+    id: "apple2",
+    company: "Apple",
+    country: "Montreal, Canada",
+    period: "November 2018 - April 2023",
+    title: "Genius",
+    moreInfo: "4 years working at the Apple Store Fairview Montreal, starting as sales specialist and switching to technician after a year, made my way up to Genius. Certified to do software and hardware repairs on mobile and desktop Apple Devices.",
+    imgSrc: '/assets/experienceImages/apple2.jpeg',
+},
+    apple: {
+        id: "apple1",
+        company: "Apple",
+        country: "Dubai, UAE",
+        period: "January 2016 - March 2017",
+        title: "Sales Specialist",
+        moreInfo: "1 year working at the first Apple Store in Dubai",
+        imgSrc: '/assets/experienceImages/apple1.jpeg',
+    },
+    lpm:{
+        id: "lpm",
+        company: "La Petite Maison",
+        country: "Dubai, UAE",
+        period: "January 2015 - January 2016",
+        title: "Chef de Rang",
+        moreInfo: "1 year working at the #1 restaurant in Dubai, fine-dining. Waiter. Most clients are VIP's",
+        imgSrc: '/assets/experienceImages/lpm.jpg',
+    },
+    ushuaia: {
+        id: "ushuaia",
+        company: "Ushuaia Club Ibiza",
+        country: "Ibiza, Spain",
+        period: "May 2017 - October 2017",
+        title: "Promotion and Entrance Assistant Manager",
+        moreInfo: "Summer internship at the #1 dayclub in the world. Assisting the promotion manager with payroll and in charge of managing the entrance guestlist",
+        imgSrc: '/assets/experienceImages/ushuaia.jpg',
+    },
+    masdepierre: {
+        id: "masdepierre",
+        company: " Le Mas de Pierre",
+        country: "St.Paul de Vence, France",
+        period: "April 2016 - September 2016",
+        title: "Waiter and MiniBar manager",
+        moreInfo: "Summer internship at a Relais & Chateaux's restaurant in the south of France. Minibar manager for the hotel.",
+        imgSrc: '/assets/experienceImages/masdepierre.jpeg',
+    },
+    }

@@ -16,9 +16,10 @@ const ListDiv = styled.div`
 display: flex;
 align-items: center;
 justify-content: space-between;
-width: 30%;
+width: 50%;
+height: 2.8em;
 padding: .3em;
-flex-wrap: wrap;
+flex-wrap: nowrap;
 
 &.contactPage {
 flex-direction: column;
@@ -31,6 +32,7 @@ font-style: italic;
 &.programming {
     color: green;
   }
+
 `
 
 export {ListDiv, StyledParagraph}

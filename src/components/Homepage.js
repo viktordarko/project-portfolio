@@ -13,28 +13,37 @@ const Homepage = () => {
     return () => clearInterval(interval);
   }, [isBlinking]);
   const languagesArray = Object.values(languages);
-  const countriesLivedArray = Object.values(countriesLived)
+  const countriesLivedArray = Object.values(countriesLived);
   return (
     <>
       <BlinkingH1>HI!</BlinkingH1>
       <MainDiv>
         <h2>My name is Victor Vargas,</h2>
-        <MainParagraph>I am currently a full-stack web developer student, you can click on the links above to find out more about me.</MainParagraph>
-        <MainParagraph>I have many hobbies, love listening to music and traveling, and also enjoy coding, reading and watching series.</MainParagraph>
-        <MainParagraph>I speak the following languages:</MainParagraph>
-        
-        {languagesArray.map((language) => {
-          return <ListItem item={language} key={language.id}/>;
-        })}
+        <MainParagraph>
+          I have many hobbies, love listening to music and traveling, and also
+          enjoy coding, reading and watching series.
+        </MainParagraph>
+        <MainParagraph>
+          I am currently a full-stack web developer student, you can click on
+          the links above to find out more about me.
+        </MainParagraph>
 
-        <MainParagraph>I have lived and worked in these countries:</MainParagraph>
-      {countriesLivedArray.map((country) => {
-        return <ListItem item={country} key={country.id}/>;
-      }
-      
-      )
-
-      }
+        <SecondaryDiv>
+          <MainParagraph>I speak the following languages:</MainParagraph>
+          <LanguageDiv>
+            {languagesArray.map((language) => {
+              return <ListItem item={language} key={language.id} />;
+            })}
+          </LanguageDiv>
+          <MainParagraph>
+            I have lived and worked in these countries:
+          </MainParagraph>
+          <CountryDiv>
+            {countriesLivedArray.map((country) => {
+              return <ListItem item={country} key={country.id} />;
+            })}
+          </CountryDiv>
+        </SecondaryDiv>
       </MainDiv>
     </>
   );
@@ -56,8 +65,8 @@ const blinkAnimation = keyframes`
 const BlinkingH1 = styled.h1`
   font-size: 3rem;
   margin-left: 1em;
-padding-top: 1em;
-animation: ${blinkAnimation} 1s infinite;
+  padding-top: 1em;
+  animation: ${blinkAnimation} 1s infinite;
 `;
 
 const MainDiv = styled.div`
@@ -68,8 +77,33 @@ const MainDiv = styled.div`
 `;
 
 const MainParagraph = styled.p`
-margin-top: 1em;
-margin-bottom: .5em;
-`
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+`;
 
-export {BlinkingH1}
+const SecondaryDiv = styled.div`
+  display: grid;
+  border-top: 1px dashed black;
+  margin-top: 0.5em;
+  padding-top: 0.5em;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas:
+    "main main"
+    "language country";
+`;
+
+const LanguageDiv = styled.div`
+  grid-area: language;
+  justify-content: space-between;
+display: flex;
+flex-direction: column;
+`;
+
+const CountryDiv = styled.div`
+  grid-area: country;
+justify-content: space-between;
+display: flex;
+flex-direction: column;
+`;
+
+export { BlinkingH1 };
