@@ -27,8 +27,9 @@ export default App;
 
 const MainContainer = styled.div`
   width: 100vw;
-  height: calc(100vh - 5em);
+  /* height: calc(100vh - 5em); */
   background-image: url("/assets/styleImages/WebsiteBg.jpg");
-  background-position: center;
+  background-repeat: repeat;
+  background-position: center center;
   background-size: cover;
 `;

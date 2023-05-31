@@ -5,7 +5,7 @@ export const breakpoints = { tablet: "600px" };
 export default createGlobalStyle`
     :root {
       --primary-color: #625F63;
-      --secondary-color: #00072D;
+      --secondary-color: #716E72;
       --accent-color: #797A9E;
       --page-horizontal-padding: 20px;
       --header-height: 50px;
