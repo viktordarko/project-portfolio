@@ -12,12 +12,12 @@ const App = () => {
     <BrowserRouter>
       <GlobalStyles />
       <MainContainer>
-      <Header />
+        <Header />
         <Routes>
           <Route path="/" element={<Homepage />} />
           <Route path="/experience" element={<Experience />} />
           <Route path="/projects" element={<Projects />} />
-          <Route path="/contact" element={<Contact/>} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
       </MainContainer>
     </BrowserRouter>

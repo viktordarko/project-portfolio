@@ -6,9 +6,9 @@ const ContactItem = ({ item }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   const handleClick = (item) => {
-      item.id === "email"
-        ? window.alert(`You can send me an email here: ${item.contactInfo}`)
-        : window.open(item.contactInfo, "_blank");
+    item.id === "email"
+      ? window.alert(`You can send me an email here: ${item.contactInfo}`)
+      : window.open(item.contactInfo, "_blank");
   };
 
   return (
@@ -59,8 +59,8 @@ const StyledContactParagraph = styled(StyledParagraph)`
     margin-right: 1em;
   }
   @media only screen and (max-height: 810px) and (orientation: landscape) {
-opacity:1;
-}
+    opacity: 1;
+  }
 `;
 
 export default ContactItem;

@@ -12,11 +12,11 @@ const Header = () => {
   return (
     <HeaderContainer>
       <StyledHamburger src="/assets/hamburger.png" onClick={handleMenuClick} />
-      <Menu isVisible={isVisible}>
-        <MenuNavbarLink to="/" onClick={handleMenuClick}>Home</MenuNavbarLink>
-        <MenuNavbarLink to="/experience" onClick={handleMenuClick}>Experience</MenuNavbarLink>
-        <MenuNavbarLink to="/projects" onClick={handleMenuClick}>Projects</MenuNavbarLink>
-        <MenuNavbarLink to="/contact" onClick={handleMenuClick}>Contact</MenuNavbarLink>
+      <Menu isVisible={isVisible} onClick={handleMenuClick}>
+        <MenuNavbarLink to="/">Home</MenuNavbarLink>
+        <MenuNavbarLink to="/experience">Experience</MenuNavbarLink>
+        <MenuNavbarLink to="/projects">Projects</MenuNavbarLink>
+        <MenuNavbarLink to="/contact">Contact</MenuNavbarLink>
       </Menu>
       <StyledNav>
         <NavbarLink to="/">Home</NavbarLink>
@@ -38,8 +38,7 @@ const HeaderContainer = styled.header`
 
   @media only screen and (max-width: 700px) {
     height: 3em;
-}
-
+  }
 `;
 
 const Menu = styled.div`
@@ -47,13 +46,13 @@ const Menu = styled.div`
   flex-direction: column;
   position: absolute;
   min-width: fit-content;
-  width: 30% ;
-  opacity: .95;
+  width: 30%;
+  opacity: 0.95;
   top: 3em;
   color: black;
   background-color: lightgray;
   z-index: 3;
-  border-radius:0 10% 10%;
+  border-radius: 0 10% 10%;
 
   ${({ isVisible }) =>
     !isVisible
@@ -104,12 +103,11 @@ const NavbarLink = styled(NavLink)`
 `;
 
 const MenuNavbarLink = styled(NavbarLink)`
-color: var(--secondary-color);
-&.active {
-color:darkslategray;
-
-}
-`
+  color: var(--secondary-color);
+  &.active {
+    color: darkslategray;
+  }
+`;
 
 const StyledNav = styled.nav`
   display: block;

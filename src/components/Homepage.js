@@ -99,17 +99,15 @@ const SecondaryDiv = styled.div`
 const LanguageDiv = styled.div`
   grid-area: language;
   justify-content: space-between;
-display: flex;
-flex-direction: column;
-
+  display: flex;
+  flex-direction: column;
 `;
 
 const CountryDiv = styled.div`
   grid-area: country;
-justify-content: space-between;
-display: flex;
-flex-direction: column;
-
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
 `;
 
 export { BlinkingH1 };

@@ -39,11 +39,10 @@ const Experience = () => {
 
   return (
     <>
-      <MainSectionTitle>
-      Work Experiences That Shaped Me
-            </MainSectionTitle>
+      <MainSectionTitle>Work Experiences That Shaped Me</MainSectionTitle>
       <MainSectionSubtitle>
-      Discover more about my professional journey and experience on LinkedIn. Visit the contact page for the link.
+        Discover more about my professional journey and experience on LinkedIn.
+        Visit the contact page for the link.
       </MainSectionSubtitle>
 
       <StyledCard>
