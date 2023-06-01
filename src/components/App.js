@@ -5,6 +5,7 @@ import Homepage from "./Homepage";
 import styled from "styled-components";
 import Contact from "./Contact";
 import Experience from "./Experience";
+import Projects from "./Projects";
 
 const App = () => {
   return (
@@ -15,7 +16,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Homepage />} />
           <Route path="/experience" element={<Experience />} />
-          <Route path="/projects" element={<h1>Im the project page</h1>} />
+          <Route path="/projects" element={<Projects />} />
           <Route path="/contact" element={<Contact/>} />
         </Routes>
       </MainContainer>

@@ -60,10 +60,17 @@ export default createGlobalStyle`
       color: var(--primary-color);
       font-family: var(--heading-font-family);
       font-size: 2.3em;
+      @media only screen and (max-width: 700px) {
+font-size: 1.5em;
+  }
     }
     h2 {
       font-size: 2em;
+      @media only screen and (max-width: 700px) {
+font-size: 1em;
+}
     }
+    
     img {
         width: var(--icons-width);
     }
@@ -71,6 +78,9 @@ export default createGlobalStyle`
     p {
         color: var(--secondary-color);
         font-size: 1.5em;
+        @media only screen and (max-width: 700px) {
+font-size: 1em;
+        }
     }
 
 `;

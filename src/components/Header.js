@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { useState } from "react";
 
 const Header = () => {
@@ -35,6 +35,11 @@ const HeaderContainer = styled.header`
   align-items: center;
   background-image: url("/assets/styleImages/Header_bg.jpg");
   height: 5em;
+
+  @media only screen and (max-width: 700px) {
+    height: 3em;
+}
+
 `;
 
 const Menu = styled.div`
@@ -44,7 +49,7 @@ const Menu = styled.div`
   min-width: fit-content;
   width: 30% ;
   opacity: .95;
-  top: 5em;
+  top: 3em;
   color: black;
   background-color: lightgray;
   z-index: 3;

@@ -63,10 +63,14 @@ const blinkAnimation = keyframes`
 `;
 
 const BlinkingH1 = styled.h1`
-  font-size: 3rem;
+  font-size: 3em;
   margin-left: 1em;
   padding-top: 1em;
   animation: ${blinkAnimation} 1s infinite;
+
+  @media only screen and (max-width: 700px) {
+    font-size: 2em;
+  }
 `;
 
 const MainDiv = styled.div`

@@ -5,36 +5,24 @@ import { useState } from "react";
 const ContactItem = ({ item }) => {
   const [isHovered, setIsHovered] = useState(false);
 
-  const handleClick = (email) => {
-    window.alert(`You can send me an email here: ${email}`);
+  const handleClick = (item) => {
+      item.id === "email"
+        ? window.alert(`You can send me an email here: ${item.contactInfo}`)
+        : window.open(item.contactInfo, "_blank");
   };
 
   return (
     <>
-      {item.id === "email" ? (
-        <ContactCardDiv
-          onClick={() => handleClick(item.contactInfo)}
-          onMouseEnter={() => setIsHovered(true)}
-          onMouseLeave={() => setIsHovered(false)}
-        >
-          <StyledContactParagraph isHovered={isHovered}>
-            {item.name}
-          </StyledContactParagraph>
-          <img src={item.iconSrc} alt={item.name} />
-        </ContactCardDiv>
-      ) : (
-        <a href={item.contactInfo}>
-          <ContactCardDiv
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
-          >
-            <StyledContactParagraph isHovered={isHovered}>
-              {item.name}
-            </StyledContactParagraph>
-            <img src={item.iconSrc} alt={item.name} />
-          </ContactCardDiv>
-        </a>
-      )}
+      <ContactCardDiv
+        onClick={() => handleClick(item)}
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+      >
+        <StyledContactParagraph isHovered={isHovered}>
+          {item.name}
+        </StyledContactParagraph>
+        <img src={item.iconSrc} alt={item.name} />
+      </ContactCardDiv>
     </>
   );
 };
@@ -43,7 +31,7 @@ const ContactCardDiv = styled(ListDiv)`
   flex-direction: column;
   width: auto;
   justify-content: flex-start;
-  transition: transform .3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
 
   &:hover {
     cursor: pointer;

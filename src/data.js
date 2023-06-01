@@ -71,7 +71,7 @@ export const contact = {
     email: {
         id: "email",
         name: "Email",
-        contactInfo: "victor.vargas.mx@gmail.com",
+        contactInfo: "shelf_zetas_0l@icloud.com",
         iconSrc: '/assets/socialIcons/EMAIL.png',
         contact: true,
     },
@@ -135,7 +135,7 @@ export const experience = {
     },
     ushuaia: {
         id: "ushuaia",
-        company: "Ushuaia Club Ibiza",
+        company: "Ushuaia Club and Resort",
         country: "Ibiza, Spain",
         period: "May 2017 - October 2017",
         title: "Promotion and Entrance Assistant Manager",
@@ -151,4 +151,21 @@ export const experience = {
         moreInfo: "Summer internship at a Relais & Chateaux's restaurant in the south of France. Minibar manager for the hotel.",
         imgSrc: '/assets/experienceImages/masdepierre.jpeg',
     },
+    }
+
+    export const projects = {
+      got: {
+        id: "got",
+        title: "GoT inspired - Space Invaders clone",
+        language: "Javascript, CSS",
+        ssSource: "assets/projectImages/mainPage.png",
+        isPlaceholder: false,
+        url: "https://project-js-got.vercel.app/",
+      },
+
+      placeholder: {
+        id: "placeholder",
+        title: "New projects coming Soon",
+        isPlaceholder: true,
+      },
     }

@@ -39,8 +39,12 @@ const Experience = () => {
 
   return (
     <>
-      <ExperienceTitle>These are some of the places where I have worked</ExperienceTitle>
-      <ExperienceSubtitle>For a full list, go to linkedIn on the contact page</ExperienceSubtitle>
+      <MainSectionTitle>
+      Work Experiences That Shaped Me
+            </MainSectionTitle>
+      <MainSectionSubtitle>
+      Discover more about my professional journey and experience on LinkedIn. Visit the contact page for the link.
+      </MainSectionSubtitle>
 
       <StyledCard>
         <ButtonDiv>
@@ -76,16 +80,23 @@ const Experience = () => {
 };
 export default Experience;
 
-const ExperienceTitle = styled.p`
+const MainSectionTitle = styled.p`
   font-size: 2em;
   margin-left: 1em;
   padding-top: 1em;
-`
-const ExperienceSubtitle = styled(ExperienceTitle)`
-font-size: 1.2em;
-margin-left: 3em;
 
-`
+  @media only screen and (max-width: 700px) {
+    font-size: 1.5em;
+  }
+`;
+const MainSectionSubtitle = styled(MainSectionTitle)`
+  font-size: 1.2em;
+  margin-left: 3em;
+
+  @media only screen and (max-width: 700px) {
+    font-size: 0.9em;
+  }
+`;
 
 const ButtonDiv = styled.div`
   width: 100%;
@@ -187,13 +198,10 @@ const StyledButton = styled.button`
     `}
 
 @media (min-width: 700px) {
-    .button-54 {
-      padding: 0.25em 0.75em;
-    }
+    padding: 0.2em 0.7em;
   }
 `;
 
-/* CSS */
 const ShowMoreButton = styled.button`
   all: unset;
   width: 100px;
@@ -260,3 +268,5 @@ const ShowMoreButton = styled.button`
     transform: translate(0, 5%);
   }
 `;
+
+export { MainSectionTitle, MainSectionSubtitle };
