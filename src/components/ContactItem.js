@@ -58,6 +58,9 @@ const StyledContactParagraph = styled(StyledParagraph)`
     opacity: 1;
     margin-right: 1em;
   }
+  @media only screen and (max-height: 810px) and (orientation: landscape) {
+opacity:1;
+}
 `;
 
 export default ContactItem;

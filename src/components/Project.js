@@ -54,6 +54,7 @@ const ProjectImage = styled.img`
 width: 100%;
 padding: 3%;
 transition: transform 0.3s ease-in-out;
+border-radius: 7% 7% 0 0;
 
 &:hover {
   transform: rotateY(360deg);

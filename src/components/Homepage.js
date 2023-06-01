@@ -101,6 +101,7 @@ const LanguageDiv = styled.div`
   justify-content: space-between;
 display: flex;
 flex-direction: column;
+
 `;
 
 const CountryDiv = styled.div`
@@ -108,6 +109,7 @@ const CountryDiv = styled.div`
 justify-content: space-between;
 display: flex;
 flex-direction: column;
+
 `;
 
 export { BlinkingH1 };
