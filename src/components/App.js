@@ -27,7 +27,8 @@ export default App;
 
 const MainContainer = styled.div`
   width: 100vw;
-  /* height: calc(100vh - 5em); */
+  min-height: 100vh;
+  height: fit-content;
   background-image: url("/assets/styleImages/WebsiteBg.jpg");
   background-repeat: repeat;
   background-position: center center;

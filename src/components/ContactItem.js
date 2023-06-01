@@ -1,5 +1,5 @@
-import styled, { css } from "styled-components"
-import { ListDiv, StyledParagraph } from "./ListItem"
+import styled, { css } from "styled-components";
+import { ListDiv, StyledParagraph } from "./ListItem";
 import { useState } from "react";
 
 const ContactItem = ({ item }) => {
@@ -37,16 +37,22 @@ const ContactItem = ({ item }) => {
       )}
     </>
   );
-}
+};
 
 const ContactCardDiv = styled(ListDiv)`
   flex-direction: column;
   width: auto;
   justify-content: flex-start;
+  transition: transform .3s ease-in-out;
 
   &:hover {
     cursor: pointer;
-    /* add animation */
+    transform: scale(1.1);
+  }
+
+  @media only screen and (max-width: 700px) {
+    flex-direction: row;
+    justify-content: center;
   }
 `;
 
@@ -59,7 +65,11 @@ const StyledContactParagraph = styled(StyledParagraph)`
     css`
       opacity: 1;
     `}
+
+  @media only screen and (max-width: 700px) {
+    opacity: 1;
+    margin-right: 1em;
+  }
 `;
 
-
-export default ContactItem
+export default ContactItem;

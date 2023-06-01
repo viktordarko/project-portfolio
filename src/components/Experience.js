@@ -186,7 +186,7 @@ const StyledButton = styled.button`
       }
     `}
 
-@media (min-width: 768px) {
+@media (min-width: 700px) {
     .button-54 {
       padding: 0.25em 0.75em;
     }

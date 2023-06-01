@@ -19,9 +19,9 @@ const Contact = () => {
     <>
       <BlinkingH1>Contact me</BlinkingH1>
       <ContactDiv>
-      {contactArray.map((contact) => {
-        return <ContactItem item={contact} key={contact.id} />;
-      })}
+        {contactArray.map((contact) => {
+          return <ContactItem item={contact} key={contact.id} />;
+        })}
       </ContactDiv>
     </>
   );
@@ -29,10 +29,16 @@ const Contact = () => {
 export default Contact;
 
 const ContactDiv = styled.div`
-display: flex;
-margin-top: 5em;
-font-size: x-large;
-width: 100%;
-justify-content: space-around;
-height: 64vh;
-`
+  display: flex;
+  margin-top: 5em;
+  font-size: x-large;
+  width: 100%;
+  justify-content: space-around;
+  height: 64vh;
+
+  @media only screen and (max-width: 700px) {
+    flex-direction: column;
+    position: relative;
+    margin-top: 0.5em;
+  }
+`;
