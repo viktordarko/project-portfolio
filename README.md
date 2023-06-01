@@ -1,6 +1,4 @@
-# project-portfolio - Victor Vargas
-
-React project - portfolio
+# React project - Victor Vargas
 
 # Introduction
 
