@@ -1,6 +1,6 @@
 import styled, { keyframes, css } from "styled-components";
 import { experience } from "../data";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const Experience = () => {
   const [index, setIndex] = useState(0);
@@ -36,6 +36,13 @@ const Experience = () => {
     }
   }
   const previewingJob = experiencearray[index];
+
+  useEffect(() => {
+    window.scroll({
+      top: document.documentElement.offsetHeight,
+      behavior: "smooth",
+    })
+  }, [showMore]);
 
   return (
     <>

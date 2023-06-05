@@ -82,11 +82,11 @@ const ProjectBox = styled.div`
 `;
 
 const TitleProject = styled.p`
-font-size: 1em;
+font-size: .7em;
   font-weight: 600;
-  margin-bottom: 2vh;
+  margin-bottom: 1vh;
 `;
 
 const SubitleProject = styled.p`
-font-size: .7em;
+font-size: .5em;
 `

@@ -17,7 +17,7 @@ const HeroPage = () => {
         <MainDiv>
         <BlinkingH1>HI!</BlinkingH1>
         <Slide in={true} easing={"ease"} direction="left" timeout={2000}>
-        <MainSectionTitle>My name is Victor Vargas,</MainSectionTitle>
+        <HeroTitle>My name is Victor Vargas,</HeroTitle>
         </Slide>
         <MainParagraph>
           I am currently a full-stack web developer student, you can click on
@@ -55,7 +55,9 @@ const BlinkingH1 = styled.h1`
     font-size: 2em;
   }
 `;
-
+const HeroTitle = styled(MainSectionTitle)`
+margin-left: 0;
+`
 const MainParagraph = styled.p`
   margin-top: 1em;
   margin-bottom: 0.5em;
