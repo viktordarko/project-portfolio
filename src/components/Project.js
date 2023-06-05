@@ -76,8 +76,8 @@ const ProjectBox = styled.div`
   transition: transform 0.3s ease-in-out;
 
   &:hover {
-  transform: scale(1.5);
-  }
+  transform: scale(1.5) translate(0, 1em);
+}
 
 `;
 

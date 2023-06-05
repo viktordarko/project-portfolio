@@ -27,6 +27,10 @@ const Experience = () => {
   function handleMoreClick() {
     if (showMore) {
       setTurningOff(true);
+    window.scroll({
+      top: 0,
+      behavior: "smooth",
+    });
       setTimeout(() => {
         setShowMore(false);
         setTurningOff(false);
