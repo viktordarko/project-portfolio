@@ -6,6 +6,7 @@ import styled from "styled-components";
 import Contact from "./Contact";
 import Experience from "./Experience";
 import Projects from "./Projects";
+import HeroPage from "./HeroPage";
 
 const App = () => {
   return (
@@ -14,7 +15,7 @@ const App = () => {
       <MainContainer>
         <Header />
         <Routes>
-          <Route path="/" element={<Homepage />} />
+          <Route path="/" element={ <> <HeroPage /> <Homepage /> </>} />
           <Route path="/experience" element={<Experience />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/contact" element={<Contact />} />

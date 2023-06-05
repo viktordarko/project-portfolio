@@ -30,7 +30,7 @@ export default Projects;
 
 const ProjectsDiv = styled.div`
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   width: 80%;
   position: relative;
   left: 10vw;

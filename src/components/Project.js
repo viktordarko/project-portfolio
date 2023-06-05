@@ -16,7 +16,7 @@ const Project = ({ project }) => {
           />
           <ProjectContainer>
             <TitleProject>{project.title}</TitleProject>
-            <p>Languages used: {project.language}</p>
+            <SubitleProject>Languages used: {project.language}</SubitleProject>
           </ProjectContainer>
         </ProjectBox>
       ) : (
@@ -41,7 +41,7 @@ const PlaceholderContainer = styled.div`
   justify-content: center;
 `;
 const ProjectContainer = styled.div`
-  height: 20vh;
+  height: 10vh;
   display: flex;
   flex-direction: column;
   grid-area: project;
@@ -55,6 +55,7 @@ const ProjectImage = styled.img`
   border-radius: 7% 7% 0 0;
 
   &:hover {
+    cursor: pointer;
     transform: rotateY(360deg);
   }
 `;
@@ -72,9 +73,20 @@ const ProjectBox = styled.div`
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
     rgba(0, 0, 0, 0.22) 0px 15px 12px;
   border-radius: 5% 5% 10% 10%;
+  transition: transform 0.3s ease-in-out;
+
+  &:hover {
+  transform: scale(1.5);
+  }
+
 `;
 
 const TitleProject = styled.p`
+font-size: 1em;
   font-weight: 600;
   margin-bottom: 2vh;
 `;
+
+const SubitleProject = styled.p`
+font-size: .7em;
+`

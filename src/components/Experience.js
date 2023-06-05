@@ -80,6 +80,7 @@ const Experience = () => {
 export default Experience;
 
 const MainSectionTitle = styled.p`
+  font-weight: 600;
   font-size: 2em;
   margin-left: 1em;
   padding-top: 1em;
@@ -89,6 +90,7 @@ const MainSectionTitle = styled.p`
   }
 `;
 const MainSectionSubtitle = styled(MainSectionTitle)`
+  font-weight: 200;
   font-size: 1.2em;
   margin-left: 3em;
 

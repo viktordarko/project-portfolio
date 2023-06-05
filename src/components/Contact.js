@@ -1,18 +1,10 @@
-import { useEffect, useState } from "react";
-import { BlinkingH1 } from "./Homepage";
 import { contact } from "../data";
 import styled from "styled-components";
 import ContactItem from "./ContactItem";
+import { BlinkingH1 } from "./HeroPage";
 
 const Contact = () => {
-  const [isBlinking, setisBlinking] = useState(true);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setisBlinking(!isBlinking);
-    }, 1000);
-    return () => clearInterval(interval);
-  }, [isBlinking]);
 
   const contactArray = Object.values(contact);
   return (
