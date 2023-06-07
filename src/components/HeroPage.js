@@ -1,17 +1,8 @@
 import Slide from "@mui/material/Slide";
-import { useEffect, useState } from "react";
 import styled, { keyframes } from "styled-components";
 import { MainSectionTitle } from "./Experience";
 
 const HeroPage = () => {
-
-    const [isBlinking, setisBlinking] = useState(true);
-    useEffect(() => {
-      const interval = setInterval(() => {
-        setisBlinking(!isBlinking);
-      }, 1000);
-      return () => clearInterval(interval);
-    }, [isBlinking]);
 
     return (
         <MainDiv>
@@ -49,7 +40,7 @@ const BlinkingH1 = styled.h1`
   font-size: 3em;
   margin-left: 1em;
   padding-top: 1em;
-  animation: ${blinkAnimation} 1s infinite;
+  animation: ${blinkAnimation} 1s 2 ease-in;
 
   @media only screen and (max-width: 700px) {
     font-size: 2em;

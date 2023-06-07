@@ -12,25 +12,25 @@ const Experience = () => {
   const hasPrevious = index > 0;
   const hasNext = index < experiencearray.length - 1;
 
-  function handlePreviousClick() {
+  const handlePreviousClick = () => {
     if (hasPrevious) {
       setIndex(index - 1);
     }
-  }
-
-  function handleNextClick() {
+  };
+  
+  const handleNextClick = () => {
     if (hasNext) {
       setIndex(index + 1);
     }
-  }
-
-  function handleMoreClick() {
+  };
+  
+  const handleMoreClick = () => {
     if (showMore) {
       setTurningOff(true);
-    window.scroll({
-      top: 0,
-      behavior: "smooth",
-    });
+      window.scroll({
+        top: 0,
+        behavior: "smooth",
+      });
       setTimeout(() => {
         setShowMore(false);
         setTurningOff(false);
@@ -38,7 +38,8 @@ const Experience = () => {
     } else {
       setShowMore(true);
     }
-  }
+  };
+
   const previewingJob = experiencearray[index];
 
   useEffect(() => {
