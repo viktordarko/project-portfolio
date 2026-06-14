@@ -1,0 +1,91 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  height: 64px;
+  padding-inline: var(--page-padding);
+  background: rgba(11, 11, 18, 0.72);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+}
+
+.brand {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text);
+  white-space: nowrap;
+}
+
+.nav {
+  display: flex;
+  gap: 0.35rem;
+}
+
+.link {
+  padding: 0.45rem 0.85rem;
+  border-radius: var(--radius-sm);
+  color: var(--text-muted);
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition:
+    color 0.2s ease,
+    background 0.2s ease;
+}
+
+.link:hover {
+  color: var(--text);
+  background: var(--surface);
+}
+
+.active {
+  color: var(--accent);
+  background: var(--surface);
+}
+
+.menuLink {
+  composes: link;
+  width: 100%;
+}
+
+.hamburger {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  font-size: 1.3rem;
+}
+
+.menu {
+  position: absolute;
+  top: 64px;
+  right: var(--page-padding);
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  min-width: 180px;
+  padding: 0.5rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5);
+}
+
+@media (width <= 700px) {
+  .nav {
+    display: none;
+  }
+
+  .hamburger {
+    display: inline-flex;
+  }
+}
