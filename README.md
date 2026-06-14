@@ -1,39 +1,55 @@
-# React project - Victor Vargas
+# Portfolio — Victor Vargas
 
-# Introduction
+A personal portfolio SPA, originally built in 2023 with Create React App and
+since modernized to a fast, type-safe stack.
 
-Portfolio created using React, styled components and vanilla Javascript
+## Tech stack
 
----
+- **[Vite](https://vite.dev/)** (with **Lightning CSS**) — build tool & dev server
+- **React 19** + **TypeScript**
+- **[React Router](https://reactrouter.com/)** — client-side routing
+- **CSS Modules** — component-scoped styling on a dark design-token system
+- **[Swiper](https://swiperjs.com/)** — experience carousel
+- **[Motion](https://motion.dev/)** — page transitions and scroll reveals
+- **[react-icons](https://react-icons.github.io/react-icons/)** — crisp SVG tech & social icons
+- Fonts: **Space Grotesk** (display) + **Inter** (body)
+- **[oxlint](https://oxc.rs/)** — linting
+- **pnpm** — package manager
 
-## **General features**
+## Scripts
 
-- Responsive and mobile friendly through media queries 
-- Animations for clickable elements
-- Responsive layout
-- Use of hooks like usestate and useeffect
-- Easily scalable through data.js modifications, adding an object would automatically update the website.
-- Header adapts in case it won't fit the screen anymore by switching to a "hamburger" that extends to the different sections.
+| Command | Description |
+| --- | --- |
+| `pnpm dev` | Start the dev server |
+| `pnpm build` | Type-check and build for production (`dist/`) |
+| `pnpm preview` | Preview the production build |
+| `pnpm lint` | Run oxlint |
+| `pnpm typecheck` | Type-check without emitting |
 
-## **Home section**
+## Architecture
 
--Easily scalable when new languages or countries get added to the data.js file
+- **Content lives in [`src/data.ts`](src/data.ts)** — typed records for the hero,
+  tech stack, spoken languages, countries, contact links, experience, and
+  projects. Adding an entry there automatically updates the UI; the original
+  "just add an object" promise still holds, now type-checked.
+- **Dark design tokens** (surfaces, accent + gradient, fonts, spacing, container)
+  live in [`src/styles/tokens.css`](src/styles/tokens.css); the reset and base
+  element styles in [`src/styles/global.css`](src/styles/global.css).
+- **Shared presentational pieces** (`Container`, section headings, page
+  transition, scroll reveal) live in
+  [`src/components/shared/`](src/components/shared/).
 
-## **Projects section**
+## Sections
 
--Placeholder for future projects
--Easily scalable, animation over screenshot of project.
+- **Home** — animated hero (name, role, tagline, social links, Download CV),
+  a grouped **Tech Stack** with SVG icons, and an **About** strip with languages
+  and countries.
+- **Experience** — Swiper carousel of work history; previous/next slides peek
+  and are clickable, with a "show more" details panel below.
+- **Projects** — grid of project cards; placeholder uses a pure-CSS night sky.
+- **Contact** — icon cards (react-icons) that lift on hover.
 
-## **Experience section**
+## Resume
 
--Image carousel with option to show more information, buttons deactivate depending of beginning or end of experiences.
--Adding object to data.js would update project without needing to make any modifications at all to the main project
-
-## **Contact section**
-
-- When it reached a certain width it re-arrenges the icons and shows its name.
-
-- Landscape on mobile devices would show the names as well since there is no hovering.
-
-
-Background Image by <a href="https://www.freepik.com/free-vector/white-elegant-texture-wallpaper_6638486.htm#query=elegant%20background&position=0&from_view=keyword&track=ais">Freepik</a>
+The hero's **Download CV** button links to `/resume.pdf`. Drop your PDF at
+[`public/resume.pdf`](public/) to enable it.

@@ -1,0 +1,20 @@
+.app {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--bg);
+  /* Subtle accent glow + faint grid, pure CSS (no image asset). */
+  background-image:
+    radial-gradient(
+      60% 50% at 15% 0%,
+      var(--accent-glow),
+      transparent 70%
+    ),
+    radial-gradient(
+      50% 45% at 95% 10%,
+      rgba(181, 139, 255, 0.18),
+      transparent 70%
+    );
+  background-repeat: no-repeat;
+  overflow-x: hidden;
+}

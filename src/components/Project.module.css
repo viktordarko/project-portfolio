@@ -1,0 +1,84 @@
+.box {
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  max-width: 100%;
+  overflow: hidden;
+  border-radius: 14px;
+  background: linear-gradient(
+    to bottom right,
+    #625f63,
+    white,
+    beige,
+    white,
+    #625f63
+  );
+  box-shadow:
+    rgba(0, 0, 0, 0.3) 0 12px 28px,
+    rgba(0, 0, 0, 0.22) 0 8px 10px;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.box:hover {
+  transform: translateY(-8px);
+  box-shadow:
+    rgba(0, 0, 0, 0.4) 0 22px 42px,
+    rgba(0, 0, 0, 0.25) 0 12px 16px;
+}
+
+.image {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  padding: 12px 12px 0;
+  border-radius: 18px 18px 0 0;
+  transition: transform 0.6s ease-in-out;
+}
+
+.box:hover .image {
+  transform: rotateY(360deg);
+}
+
+.info {
+  padding: 0.9em 1em 1.2em;
+  text-align: center;
+}
+
+.title {
+  font-size: 1em;
+  font-weight: 600;
+  margin-bottom: 0.3em;
+  color: #1c1c28;
+}
+
+.subtitle {
+  font-size: 0.8em;
+  color: #55556a;
+}
+
+.placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 320px;
+  max-width: 100%;
+  min-height: 260px;
+  padding: 2em;
+  border-radius: 14px;
+  /* Pure-CSS night sky (replaces the old 1.7MB animated GIF). */
+  background-color: #050814;
+  background-image:
+    radial-gradient(1.5px 1.5px at 20% 30%, #fff, transparent),
+    radial-gradient(1.5px 1.5px at 70% 65%, #fff, transparent),
+    radial-gradient(1px 1px at 45% 80%, #cfd8ff, transparent),
+    radial-gradient(1px 1px at 85% 25%, #fff, transparent),
+    radial-gradient(1.5px 1.5px at 35% 55%, #cfd8ff, transparent),
+    radial-gradient(circle at 50% 40%, #1b2350, #050814 70%);
+}
+
+.placeholder p {
+  color: #fff;
+  font-size: 1.1em;
+}

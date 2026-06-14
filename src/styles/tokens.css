@@ -1,0 +1,41 @@
+:root {
+  /* Surfaces (dark, with elevation) */
+  --bg: #0b0b12;
+  --surface: #14141f;
+  --surface-2: #1c1c2b;
+  --border: #2a2a3d;
+
+  /* Text */
+  --text: #ecedf5;
+  --text-muted: #9b9cb5;
+
+  /* Accent (on-brand violet) + gradient */
+  --accent: #8a7cff;
+  --accent-2: #b58bff;
+  --accent-contrast: #0b0b12;
+  --accent-glow: rgba(138, 124, 255, 0.35);
+
+  /* Typography */
+  --font-display: "Space Grotesk", sans-serif;
+  --font-body: "Inter", sans-serif;
+
+  /* Layout */
+  --container: 1120px;
+  --page-padding: clamp(1.25rem, 5vw, 3rem);
+  --radius: 14px;
+  --radius-sm: 10px;
+
+  /* Spacing scale */
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2.5rem;
+  --space-5: 4rem;
+  --space-6: 6rem;
+
+  /* Swiper theming hook */
+  --swiper-theme-color: var(--accent);
+
+  /* Single source of truth for the mobile breakpoint. */
+  --breakpoint-mobile: 700px;
+}
