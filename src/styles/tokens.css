@@ -9,11 +9,12 @@
   --text: #ecedf5;
   --text-muted: #9b9cb5;
 
-  /* Accent (on-brand violet) + gradient */
-  --accent: #8a7cff;
-  --accent-2: #b58bff;
+  /* Accent (terracotta) + gradient */
+  --accent: #e2725b;
+  --accent-2: #ff8a65;
   --accent-contrast: #0b0b12;
-  --accent-glow: rgba(138, 124, 255, 0.35);
+  --accent-glow: rgba(226, 114, 91, 0.35);
+  --accent-glow-2: rgba(255, 138, 101, 0.18);
 
   /* Typography */
   --font-display: "Space Grotesk", sans-serif;
@@ -21,7 +22,7 @@
 
   /* Layout */
   --container: 1120px;
-  --page-padding: clamp(1.25rem, 5vw, 3rem);
+  --page-padding: clamp(1.25rem, 5dvw, 3rem);
   --radius: 14px;
   --radius-sm: 10px;
 

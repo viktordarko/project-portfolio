@@ -4,6 +4,7 @@
   margin: 2em auto 0;
   padding: 1em 0 2em;
   --swiper-theme-color: var(--accent);
+  user-select: none;
 }
 
 .slide {
