@@ -52,6 +52,7 @@ export const techStack: TechCategory[] = [
     skills: [
       { name: "React", icon: "react" },
       { name: "Next.js", icon: "nextjs" },
+      { name: "Astro", icon: "astro" },
       { name: "TypeScript", icon: "typescript" },
       { name: "JavaScript", icon: "javascript" },
       { name: "Vite", icon: "vite" },
@@ -66,6 +67,16 @@ export const techStack: TechCategory[] = [
       { name: "Express", icon: "express" },
       { name: "MongoDB", icon: "mongodb" },
       { name: "Supabase", icon: "supabase" },
+      { name: "Auth0", icon: "auth0" },
+      { name: "Cloudinary", icon: "cloudinary" },
+      { name: "Vimeo", icon: "vimeo" },
+    ],
+  },
+  {
+    label: "Testing",
+    skills: [
+      { name: "Vitest", icon: "vitest" },
+      { name: "Playwright", icon: "playwright" },
     ],
   },
   {
@@ -76,6 +87,7 @@ export const techStack: TechCategory[] = [
       { name: "GitHub Actions", icon: "githubactions" },
       { name: "Vercel", icon: "vercel" },
       { name: "Netlify", icon: "netlify" },
+      { name: "Render", icon: "render" },
     ],
   },
 ];
@@ -164,8 +176,7 @@ export const experience: Record<string, Experience> = {
     country: "Dubai, UAE",
     period: "January 2016 - March 2017",
     title: "Specialist",
-    moreInfo:
-      "Premium consultative sales as an Apple Specialist in Dubai.",
+    moreInfo: "Premium consultative sales as an Apple Specialist in Dubai.",
     imgSrc: "/assets/experienceImages/apple1.webp",
   },
   ushuaia: {
@@ -184,8 +195,7 @@ export const experience: Record<string, Experience> = {
     country: "St. Paul de Vence, France",
     period: "April 2016 - September 2016",
     title: "Waiter & Minibar Manager",
-    moreInfo:
-      "A season at a Relais & Châteaux hotel restaurant in the South of France.",
+    moreInfo: "A season at a Relais & Châteaux hotel restaurant in the South of France.",
     imgSrc: "/assets/experienceImages/masdepierre.webp",
   },
   lpm: {

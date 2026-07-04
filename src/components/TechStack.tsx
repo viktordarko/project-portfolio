@@ -1,6 +1,9 @@
 import type { IconType } from "react-icons";
-import { FaGithub } from "react-icons/fa6";
+import { FaGithub, FaMasksTheater } from "react-icons/fa6";
 import {
+  SiAstro,
+  SiAuth0,
+  SiCloudinary,
   SiCss,
   SiExpress,
   SiGit,
@@ -12,10 +15,13 @@ import {
   SiNextdotjs,
   SiNodedotjs,
   SiReact,
+  SiRender,
   SiSupabase,
   SiTypescript,
   SiVercel,
+  SiVimeo,
   SiVite,
+  SiVitest,
 } from "react-icons/si";
 import { techStack } from "../data";
 import { Container } from "./shared/Container";
@@ -26,6 +32,7 @@ import styles from "./TechStack.module.css";
 const techIcons: Record<string, IconType> = {
   react: SiReact,
   nextjs: SiNextdotjs,
+  astro: SiAstro,
   typescript: SiTypescript,
   javascript: SiJavascript,
   vite: SiVite,
@@ -35,11 +42,17 @@ const techIcons: Record<string, IconType> = {
   express: SiExpress,
   mongodb: SiMongodb,
   supabase: SiSupabase,
+  auth0: SiAuth0,
+  cloudinary: SiCloudinary,
+  vimeo: SiVimeo,
+  vitest: SiVitest,
+  playwright: FaMasksTheater,
   git: SiGit,
   github: FaGithub,
   githubactions: SiGithubactions,
   vercel: SiVercel,
   netlify: SiNetlify,
+  render: SiRender,
 };
 
 const TechStack = () => (
@@ -49,7 +62,7 @@ const TechStack = () => (
       <SectionSubtitle>The tools I reach for to build and ship.</SectionSubtitle>
       <div className={styles.groups}>
         {techStack.map((category) => (
-          <Reveal key={category.label} className={styles.group}>
+          <Reveal key={category.label} className={styles.groups}>
             <h3 className={styles.groupLabel}>{category.label}</h3>
             <ul className={styles.chips}>
               {category.skills.map((skill) => {
