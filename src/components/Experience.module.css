@@ -1,32 +1,70 @@
+/*
+ * Full-bleed: break out of Container's max-width and page padding so the fan
+ * runs edge to edge and the peeking slides read as continuing off-screen
+ * rather than being clipped by the gutter. Same technique as the package's
+ * `g-full-width` utility.
+ */
 .card {
-  width: 80%;
-  max-width: 920px;
-  margin: 2em auto 0;
-  padding: 1em 0 2em;
+  width: 100dvw;
+  max-width: 100dvw;
+  margin: 2em 0 0 calc(50% - 50dvw);
+  /* Room for the 3D slides to fan out without being clipped. */
+  padding: 1em 0 2.5em;
   --swiper-theme-color: var(--accent);
   user-select: none;
+  overflow: hidden;
+}
+
+/*
+ * Coverflow overlap, tuned here rather than cloning the package: the title and
+ * the image share one 160% box, so slides overlap while each caption stays
+ * locked to its own photo. Swiper z-orders the active slide on top, so the
+ * overlap reads as depth instead of collision.
+ */
+.card :global(.swiper-wrapper) {
+  align-items: flex-start;
 }
 
 .slide {
-  width: min(520px, 82%);
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
-  transition: opacity 0.35s ease, transform 0.35s ease;
-}
-
-/* Dim the peeking previous/next slides; clicking one slides to it. */
-.slide:not(:global(.swiper-slide-active)) {
-  opacity: 0.45;
-  transform: scale(0.86);
   cursor: pointer;
 }
 
+/* Only the photo overflows its slide — that overflow is what makes the fan overlap. */
+.image {
+  width: 160%;
+  max-width: 160%;
+}
+
+/*
+ * The caption stays inside its slide box so neighbouring captions sit side by
+ * side instead of overlapping, and the height is fixed at two lines so a long
+ * company name can never push its own photo out of line with the rest.
+ */
 .slideTitle {
+  width: 100%;
+  height: 3.2em;
+  align-content: center;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+  padding: 0.15em 0.5em;
+  border-radius: var(--radius-sm);
   color: var(--accent);
-  margin: 0.2em 0 0.5em;
-  font-size: 1.4em;
+  font-size: 1rem;
+  text-align: center;
+}
+
+/*
+ * Captions are 160% wide so they track their own photo, which means they can
+ * run into their neighbours at some widths. Swiper z-orders the active slide
+ * on top, so frosting only the active caption lets it cover the peeking ones
+ * instead of tangling with them.
+ */
+.slide:global(.swiper-slide-active) .slideTitle {
+  background: color-mix(in srgb, var(--bg) 55%, transparent);
+  backdrop-filter: blur(12px);
 }
 
 .country {
@@ -34,12 +72,17 @@
   color: var(--accent);
 }
 
+/* Uniform 16:9 across photos of differing native ratios — cropped, never squashed. */
 .image {
-  width: 100%;
   aspect-ratio: 16 / 9;
+  height: auto;
   object-fit: cover;
   border-radius: 14px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+/* Only the centred slide is lifted — a shadow on a rotated slide reads wrong. */
+.slide:global(.swiper-slide-active) .image {
+  box-shadow: 3.3px 6.6px 6.6px hsl(0deg 0% 0% / 0.4);
 }
 
 .details {
@@ -60,7 +103,11 @@
   text-align: left;
 }
 
+/* An h4 — outside the h1-h3 range global.css styles, so it sets its own. */
 .moreInfoTitle {
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--text);
   font-family: var(--font-display);
   font-size: 1.2rem;
   color: var(--text);
@@ -162,4 +209,16 @@
 .showMore:active::after {
   transition: 0s;
   transform: translate(0, 5%);
+}
+
+/*
+ * Below the 800px breakpoint (where slidesPerView drops 5 -> 3) the slides are
+ * narrow enough that a caption per slide reads cramped, so only the active one
+ * is shown. `visibility` rather than `display` so the reserved height keeps
+ * every photo on the same line.
+ */
+@media (width < 800px) {
+  .slide:not(:global(.swiper-slide-active)) .slideTitle {
+    visibility: hidden;
+  }
 }

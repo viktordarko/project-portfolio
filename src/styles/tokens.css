@@ -36,7 +36,4 @@
 
   /* Swiper theming hook */
   --swiper-theme-color: var(--accent);
-
-  /* Single source of truth for the mobile breakpoint. */
-  --breakpoint-mobile: 700px;
 }
