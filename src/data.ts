@@ -88,6 +88,7 @@ export const techStack: TechCategory[] = [
       { name: "Vercel", icon: "vercel" },
       { name: "Netlify", icon: "netlify" },
       { name: "Render", icon: "render" },
+      { name: "Docker", icon: "docker" },
     ],
   },
 ];
@@ -214,24 +215,72 @@ export interface Project {
   id: string;
   title: string;
   isPlaceholder: boolean;
-  language?: string;
+  description?: string;
+  /** Lead framework — rendered as the badge over the screenshot. */
+  framework?: TechSkill;
+  /** Supporting stack — rendered as the icon rail in the card footer. */
+  stack?: TechSkill[];
   ssSource?: string;
   url?: string;
+  /** Only set when the repository is public. */
+  repoUrl?: string;
 }
 
 export const projects: Record<string, Project> = {
+  coco: {
+    id: "coco",
+    title: "Coco · Service Dog Verification",
+    description:
+      "A phone-first verification page for a service dog — an inline viewer for certifications, handler ID and medical letters, plus an emergency protocol for first responders.",
+    framework: { name: "Astro", icon: "astro" },
+    stack: [
+      { name: "React", icon: "react" },
+      { name: "TypeScript", icon: "typescript" },
+      { name: "CSS Modules", icon: "css3" },
+      { name: "Cloudinary", icon: "cloudinary" },
+    ],
+    ssSource: "/assets/projectImages/coco.webp",
+    isPlaceholder: false,
+    url: "https://coco.victorvargas.dev/",
+  },
+
+  card: {
+    id: "card",
+    title: "Canadian Card Compare",
+    description:
+      "Compares 8 Canadian credit cards side by side, normalizing points, Membership Rewards and cashback into a single estimated cash value so cards with different currencies can be judged against each other.",
+    framework: { name: "Next.js", icon: "nextjs" },
+    stack: [
+      { name: "React", icon: "react" },
+      { name: "TypeScript", icon: "typescript" },
+      { name: "CSS Modules", icon: "css3" },
+      { name: "Vitest", icon: "vitest" },
+    ],
+    ssSource: "/assets/projectImages/card.webp",
+    isPlaceholder: false,
+    url: "https://card.victorvargas.dev/",
+    repoUrl: "https://github.com/viktordarko/card-ranking-app",
+  },
+
   got: {
     id: "got",
-    title: "GoT inspired - Space Invaders clone",
-    language: "Javascript, CSS",
-    ssSource: "/assets/projectImages/mainPage.webp",
+    title: "GoT · Space Invaders",
+    description:
+      "A Game of Thrones-themed Space Invaders clone — collision detection, waves and scoring written from scratch in vanilla JavaScript and CSS. No engine, no framework.",
+    framework: { name: "JavaScript", icon: "javascript" },
+    stack: [
+      { name: "HTML5", icon: "html5" },
+      { name: "CSS3", icon: "css3" },
+    ],
+    ssSource: "/assets/projectImages/got.webp",
     isPlaceholder: false,
-    url: "https://project-js-got.vercel.app/",
+    url: "https://js-got.vercel.app/",
+    repoUrl: "https://github.com/viktordarko/project-js-got",
   },
 
   placeholder: {
     id: "placeholder",
-    title: "New projects coming Soon",
+    title: "More on the way",
     isPlaceholder: true,
   },
 };

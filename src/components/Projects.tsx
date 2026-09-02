@@ -8,14 +8,14 @@ const Projects = () => {
 
   return (
     <>
-      <SectionTitle>Welcome!</SectionTitle>
+      <SectionTitle>Selected Work</SectionTitle>
       <SectionSubtitle>
-        These are some of the projects I've worked on during my full-stack
-        bootcamp at Concordia University.
+        Things I've designed, built and shipped end to end — production sites
+        running on my own domains, alongside the arcade game I wrote when I was starting out.
       </SectionSubtitle>
       <SectionSubtitle>
-        You can click on the project image to see the project in action or you
-        can find my Github account on the Contact page.
+        Click a card to open the live site. Source is linked where the repo is
+        public.
       </SectionSubtitle>
       <div className={styles.grid}>
         {projectsArray.map((project) => (

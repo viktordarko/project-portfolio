@@ -2,10 +2,6 @@
   padding-block: var(--space-5);
 }
 
-.intro {
-  margin-bottom: var(--space-4);
-}
-
 .groups {
   display: flex;
   flex-direction: column;
